@@ -55,7 +55,7 @@ app.get('/products', (req, res) => {
     })
 })
 
-app.get('/weather', (req, res) => {
+app.get('/weather', (req, res) => { 
     if (!req.query.address) {
         return res.send({
             error: 'address must be provided'

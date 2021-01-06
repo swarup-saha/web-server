@@ -15,13 +15,13 @@ weather.addEventListener('submit', (e) => {
     console.log(location);
     search.value = "";
     messageone.textContent = 'Loading.....';
-    // messagetwo.textContent = '';
+    messagetwo.textContent = '';
     fetch(`/weather?address=${location}`)
         .then((response) => {
             response.json().then((data) => {
                 if (data.error) {
                     messageone.textContent = 'Unable to connect. Try another search';
-                    // console.log(data.error);
+                    console.log(data.error);
                 } else {
                     messageone.textContent = data.place;
                     messagetwo.textContent = data.forecast;
