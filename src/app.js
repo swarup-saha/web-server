@@ -4,7 +4,7 @@ const hbs = require('hbs');
 const geocode = require('./utills/geocode');
 const forecast = require('./utills/forecast')
 const app = express();
-//  const PORT = process.env.PORT || 3000;
+ const PORT = process.env.PORT || 3000;
 
 // console.log();
 const direcname = path.join(__dirname, '../public');
@@ -123,6 +123,6 @@ app.get('*', (req, res) => {
 // app.get('/weather', (req, res)=>{
 //     res.send('weather page');
 // })
-app.listen(3000, () => {
-    console.log('my Server port is ' );
+app.listen(PORT, () => {
+    console.log('my Server port is ' + PORT );
 })
